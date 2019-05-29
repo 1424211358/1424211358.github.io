@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>app | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Burp Suite使用介绍">
+<meta name="keywords" content="-app">
+<meta property="og:type" content="article">
+<meta property="og:title" content="app">
+<meta property="og:url" content="http://yoursite.com/2019/04/16/Burp-Suite/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Burp Suite使用介绍">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="c:/Users/Asus/AppData/Roaming/Typora/typora-user-images/1555390118743.png">
+<meta property="og:image" content="c:/Users/Asus/AppData/Roaming/Typora/typora-user-images/1555390269146.png">
+<meta property="og:image" content="c:/Users/Asus/AppData/Roaming/Typora/typora-user-images/1555390408628.png">
+<meta property="og:image" content="c:/Users/Asus/AppData/Roaming/Typora/typora-user-images/1555391366381.png">
+<meta property="og:updated_time" content="2019-04-16T05:23:29.331Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="app">
+<meta name="twitter:description" content="Burp Suite使用介绍">
+<meta name="twitter:image" content="c:/Users/Asus/AppData/Roaming/Typora/typora-user-images/1555390118743.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Burp-Suite" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/16/Burp-Suite/" class="article-date">
+  <time datetime="2019-04-16T04:38:22.000Z" itemprop="datePublished">2019-04-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      app
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Burp-Suite使用介绍"><a href="#Burp-Suite使用介绍" class="headerlink" title="Burp Suite使用介绍"></a><center>Burp Suite使用介绍</center></h1><a id="more"></a>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>1.Target(目标)——显示目标目录结构的的一个功能</p>
+<p>2.Proxy(代理)——拦截HTTP/S的代理服务器，作为一个在浏览器和目标应用程序之间的中间人，允许你拦截，查看，修改在两个方向上的原始数据流。</p>
+<p>3.Spider(蜘蛛)——应用智能感应的网络爬虫，它能完整的枚举应用程序的内容和功能。</p>
+<p>4.Scanner(扫描器)——高级工具，执行后，它能自动地发现web 应用程序的安全漏洞。</p>
+<p>5.Intruder(入侵)——一个定制的高度可配置的工具，对web应用程序进行自动化攻击，如：枚举标识符，收集有用的数据，以及使用fuzzing 技术探测常规漏洞。</p>
+<p>6.Repeater(中继器)——一个靠手动操作来触发单独的HTTP 请求，并分析应用程序响应的工具。</p>
+<p>7.Sequencer(会话)——用来分析那些不可预知的应用程序会话令牌和重要数据项的随机性的工具。</p>
+<p>8.Decoder(解码器)——进行手动执行或对应用程序数据者智能解码编码的工具。</p>
+<p>9.Comparer(对比)——通常是通过一些相关的请求和响应得到两项数据的一个可视化的“差异”。</p>
+<p>10.Extender(扩展)——可以让你加载Burp Suite的扩展，使用你自己的或第三方代码来扩展Burp Suit的功能。</p>
+<p>11.Options(设置)——对Burp Suite的一些设置</p>
+<h3 id="Proxy功能"><a href="#Proxy功能" class="headerlink" title="Proxy功能"></a>Proxy功能</h3><p>可以拦截，查看和修改所有请求和响应</p>
+<p><img src="C:\Users\Asus\AppData\Roaming\Typora\typora-user-images\1555390118743.png" alt="1555390118743"></p>
+<p>设置代理：每个浏览器都有局域网设置，勾选代理服务器地址填写127.0.0.1 端口为8080</p>
+<p>burp suite 监听的端口需一致<img src="C:\Users\Asus\AppData\Roaming\Typora\typora-user-images\1555390269146.png" alt="1555390269146"></p>
+<h2 id="Intruder（字典爆破）"><a href="#Intruder（字典爆破）" class="headerlink" title="Intruder（字典爆破）"></a>Intruder（字典爆破）</h2><p><img src="C:\Users\Asus\AppData\Roaming\Typora\typora-user-images\1555390408628.png" alt="1555390408628"></p>
+<ol>
+<li><p>add § — 在当前光标位置插入一个位置标记。</p>
+</li>
+<li><p>clear § — 删除整个模板或选中的部分模板里的位置标记。</p>
+</li>
+<li><p>auto § — 这会对放置标记的位置做一个猜测，放哪里会有用，然后就把标记放到相应位置。这是一个为攻击常规漏洞(SQL 注入)快速标记出合适位置的有用的功能，然后人工标记是为自定义攻击的。</p>
+</li>
+<li><p>refresh — 如果需要，可以刷新编辑器里有颜色的代码。</p>
+</li>
+<li><p>clear — 删除整个编辑器内容。</p>
+</li>
+<li><p>假设有两个标记（A，B），一个payload（1，2）</p>
+<p>Sniper：单个匹配 （1，）（ ，1）（2，）（，2）</p>
+<p>Battering ram：同时匹配  （1，1）（2，2）</p>
+<p>假设有两个标记（A，B），两个payload（1，2） ，（3，4）</p>
+<p>Pitchfork：交叉匹配   （1，3） （2，4）</p>
+<p>Cluster bomb：复杂  （1，3）（1，4） （2，3） （2，4）</p>
+</li>
+</ol>
+<p>payload</p>
+<p><img src="C:\Users\Asus\AppData\Roaming\Typora\typora-user-images\1555391366381.png" alt="1555391366381"></p>
+<p>payload set :设置那个参数的 payload</p>
+<p>payload type： 字符类型</p>
+<p>payload Options： 设置需要的内容</p>
+<p>完成后  start attack，弹出匹配框，注意length，</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/16/Burp-Suite/" data-id="cjw9d60od0000o47am0lxgele" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/app/">-app</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/04/16/MISC/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MISC
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/04/15/shubi/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">看到的</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/app/">-app</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ctf题/">-ctf题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/c语言笔记/">-c语言笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">-web</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/摘写/">-摘写</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/app/" style="font-size: 20px;">-app</a> <a href="/tags/ctf题/" style="font-size: 10px;">-ctf题</a> <a href="/tags/c语言笔记/" style="font-size: 10px;">-c语言笔记</a> <a href="/tags/web/" style="font-size: 10px;">-web</a> <a href="/tags/摘写/" style="font-size: 10px;">-摘写</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/12/">December 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">October 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/27/c/">c</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/26/内网获得flag/">baji</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/22/dama/">linux提权</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/16/MISC/">MISC</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/16/Burp-Suite/">app</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
